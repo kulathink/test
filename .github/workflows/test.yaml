@@ -1,18 +1,30 @@
 name: Build and deploy ASP.Net Core app 
 
 on:
- push:
-  branches: [ feature/test]
+ workflow_dispatch:
+   inputs:
+    version_name:
+     description: choose .net version
+     type: choice
+     required: true
+     options:
+      - 6.0.x
+      - 8.0.x
 
 jobs:
  Build:
   runs-on: ubuntu-latest
+   
+
 
   steps:
    - name: Checkout
      uses: actions/checkout@v6.0.1
    - name: Setup .NET Core SDK
      uses: actions/setup-dotnet@v5.0.1
+     with:
+       dotnet-version: ${{ inputs.version_name }}
+
    - name: Build & Publish
      run: |
        dotnet build 
