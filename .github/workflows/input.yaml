@@ -7,6 +7,23 @@ on:
        description: 'Name'
        type: string
        default: novak
+       required: true
+     team:
+       description: 'team name'
+       type: string
+       default: india
+       required: true
+     toss:
+       description: 'who won the toss?'
+       type: boolean
+       required: false
+     ground:
+       description: 'ground name'
+       type: choice
+       options:
+        - perth
+        - sydney
+       
 
 jobs:
  inputtest:
@@ -14,4 +31,5 @@ jobs:
 
    steps:
     - name: inputstep
-      run: echo "${{ inputs.name}}"
+      run: echo "${{ inputs.name}}", "${{ inputs.team}}", "${{ inputs.ground}}"
+    
