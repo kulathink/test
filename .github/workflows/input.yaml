@@ -3,14 +3,15 @@ name: input
 on:
  workflow_dispatch:
   inputs:
-   name: input test
-    description: 'name'
-    type: string
-    default: novak
+     name: 
+       description: 'Name'
+       type: string
+       default: novak
 
-  jobs:
+jobs:
+ input:
    runs-on: ubuntu-latest
 
    steps:
-    -name: inputstep
-     run: echo"iput test"
+    - name: inputstep
+      run: echo "iput test"
