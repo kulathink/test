@@ -1,7 +1,8 @@
 name: Build and deploy ASP.Net Core app 
 
 on:
- workflow_dispatch:
+ push:
+  branches: [ feature/test]
 
 jobs:
  Build:
