@@ -14,4 +14,4 @@ jobs:
 
    steps:
     - name: inputstep
-      run: echo "input test"
+      run: echo "${{ inputs.name}}"
