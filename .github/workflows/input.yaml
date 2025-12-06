@@ -1,0 +1,16 @@
+name: input
+
+on:
+ workflow_dispatch:
+  inputs:
+   name: input test
+    description: 'name'
+    type: string
+    default: novak
+
+  jobs:
+   runs-on: ubuntu-latest
+
+   steps:
+    -name: inputstep
+     run: echo"iput test"
