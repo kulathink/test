@@ -1,4 +1,4 @@
-name: input
+name: inputyml
 
 on:
  workflow_dispatch:
@@ -9,7 +9,7 @@ on:
        default: novak
 
 jobs:
- input:
+ inputtest:
    runs-on: ubuntu-latest
 
    steps:
