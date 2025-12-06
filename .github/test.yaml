@@ -1,15 +1,15 @@
 name : test
 
-on
- workflow_dispatch 
-  push
+on:
+ workflow_dispatch: 
+  push:
    branches: [ main ]
 
-jobs
- demo
+jobs:
+ demo:
   runs-on: ubuntu-latest
 
-  steps
+  steps:
     - name: testfile
       run: echo "this is a test file"
 
